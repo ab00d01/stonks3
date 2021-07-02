@@ -1,0 +1,329 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/Others_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="8dp"
+            android:hint="enter amount here"
+            android:inputType="number"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView16_add"
+            app:layout_constraintTop_toTopOf="@+id/textView16_add" />
+
+        <Button
+            android:id="@+id/addd"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/black"
+            android:text="Add transactions"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView15_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Salary"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView14_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Bonuses"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView15_add"
+            app:layout_constraintTop_toBottomOf="@+id/textView15_add" />
+
+
+        <TextView
+            android:id="@+id/textView13_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Rent"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView14_add"
+            app:layout_constraintTop_toBottomOf="@+id/textView14_add" />
+
+        <TextView
+            android:id="@+id/textView4_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Groceries"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView13_add"
+            app:layout_constraintTop_toBottomOf="@+id/textView13_add" />
+
+        <TextView
+            android:id="@+id/textView5_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Fuel"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView4_add"
+            app:layout_constraintTop_toBottomOf="@+id/textView4_add" />
+
+        <TextView
+            android:id="@+id/textView6_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Electricity"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView5_add"
+            app:layout_constraintTop_toBottomOf="@+id/textView5_add" />
+
+        <TextView
+            android:id="@+id/textView7_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Water"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView6_add"
+            app:layout_constraintTop_toBottomOf="@+id/textView6_add" />
+
+        <TextView
+            android:id="@+id/textView9_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Maintenance"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView7_add"
+            app:layout_constraintTop_toBottomOf="@+id/textView7_add" />
+
+        <TextView
+            android:id="@+id/textView10_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Entertainment"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView9_add"
+            app:layout_constraintTop_toBottomOf="@+id/textView9_add" />
+
+        <TextView
+            android:id="@+id/textView11_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Education"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView10_add"
+            app:layout_constraintTop_toBottomOf="@+id/textView10_add" />
+
+        <TextView
+            android:id="@+id/textView12_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Travel"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView11_add"
+            app:layout_constraintTop_toBottomOf="@+id/textView11_add" />
+
+        <TextView
+            android:id="@+id/textView16_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Others"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView12_add"
+            app:layout_constraintTop_toBottomOf="@+id/textView12_add" />
+
+        <EditText
+            android:id="@+id/salaryy_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="96dp"
+            android:layout_marginTop="4dp"
+            android:hint="enter salary amount here"
+            android:inputType="number"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView15_add"
+            app:layout_constraintTop_toTopOf="@+id/textView15_add" />
+
+        <EditText
+            android:id="@+id/bonuss_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="76dp"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:hint="enter bonus amount here"
+            android:textColor="@color/green"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView14_add"
+            app:layout_constraintTop_toTopOf="@+id/textView14_add" />
+
+        <EditText
+            android:id="@+id/rentt_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:hint="enter rent amount here"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView13_add"
+            app:layout_constraintTop_toTopOf="@+id/textView13_add" />
+
+        <EditText
+            android:id="@+id/grocc_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:hint="enter groceries amount here"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView4_add"
+            app:layout_constraintTop_toTopOf="@+id/textView4_add" />
+
+        <EditText
+            android:id="@+id/fuell_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:hint="enter fuel amount here"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView5_add"
+            app:layout_constraintTop_toTopOf="@+id/textView5_add" />
+
+        <EditText
+            android:id="@+id/elecc_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:inputType="number"
+            android:layout_marginTop="8dp"
+            android:hint="enter electricity amount here"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView6_add"
+            app:layout_constraintTop_toTopOf="@+id/textView6_add" />
+
+        <EditText
+            android:id="@+id/waterr_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:inputType="number"
+            android:layout_marginTop="8dp"
+            android:hint="enter water amount here"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView7_add"
+            app:layout_constraintTop_toTopOf="@+id/textView7_add" />
+
+        <EditText
+            android:id="@+id/maintt_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:hint="enter maintenance amount here"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView9_add"
+            app:layout_constraintTop_toTopOf="@+id/textView9_add" />
+
+        <EditText
+            android:id="@+id/enterr_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:inputType="number"
+            android:layout_marginTop="8dp"
+            android:hint="enter entertainment amount here"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView10_add"
+            app:layout_constraintTop_toTopOf="@+id/textView10_add" />
+
+        <EditText
+            android:id="@+id/eduu_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:hint="enter education amount here"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView11_add"
+            app:layout_constraintTop_toTopOf="@+id/textView11_add" />
+
+        <EditText
+            android:id="@+id/travell_add"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="8dp"
+            android:inputType="number"
+            android:hint="enter travel amount here"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView12_add"
+            app:layout_constraintTop_toTopOf="@+id/textView12_add" />
+
+        <Button
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="Back"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

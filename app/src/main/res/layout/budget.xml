@@ -1,0 +1,282 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/Others_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="2dp"
+            android:hint="enter budget here"
+            android:inputType="number"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView16_budg"
+            app:layout_constraintTop_toBottomOf="@+id/travell_budg" />
+
+        <Button
+            android:id="@+id/addb"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:backgroundTint="@color/black"
+            android:text="Update Budget"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+
+        <TextView
+            android:id="@+id/textView13_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp"
+            android:text="Rent"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView4_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Groceries"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView13_budg"
+            app:layout_constraintTop_toBottomOf="@+id/textView13_budg" />
+
+        <TextView
+            android:id="@+id/textView5_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Fuel"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView4_budg"
+            app:layout_constraintTop_toBottomOf="@+id/textView4_budg" />
+
+        <TextView
+            android:id="@+id/textView6_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Electricity"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView5_budg"
+            app:layout_constraintTop_toBottomOf="@+id/textView5_budg" />
+
+        <TextView
+            android:id="@+id/textView7_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Water"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView6_budg"
+            app:layout_constraintTop_toBottomOf="@+id/textView6_budg" />
+
+        <TextView
+            android:id="@+id/textView9_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Maintenance"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView7_budg"
+            app:layout_constraintTop_toBottomOf="@+id/textView7_budg" />
+
+        <TextView
+            android:id="@+id/textView10_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Entertainment"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView9_budg"
+            app:layout_constraintTop_toBottomOf="@+id/textView9_budg" />
+
+        <TextView
+            android:id="@+id/textView11_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Education"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView10_budg"
+            app:layout_constraintTop_toBottomOf="@+id/textView10_budg" />
+
+        <TextView
+            android:id="@+id/textView12_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Travel"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView11_budg"
+            app:layout_constraintTop_toBottomOf="@+id/textView11_budg" />
+
+        <TextView
+            android:id="@+id/textView16_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="Others"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toStartOf="@+id/textView12_budg"
+            app:layout_constraintTop_toBottomOf="@+id/textView12_budg" />
+
+
+        <EditText
+            android:id="@+id/rentt_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="108dp"
+            android:layout_marginTop="32dp"
+            android:hint="enter rent budget here"
+            android:inputType="number"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView13_budg"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/grocc_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="2dp"
+            android:hint="enter groceries budget here"
+            android:inputType="number"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView4_budg"
+            app:layout_constraintTop_toBottomOf="@+id/rentt_budg" />
+
+        <EditText
+            android:id="@+id/fuell_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="112dp"
+            android:layout_marginTop="2dp"
+            android:hint="enter fuel budget here"
+            android:inputType="number"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView5_budg"
+            app:layout_constraintTop_toBottomOf="@+id/grocc_budg" />
+
+        <EditText
+            android:id="@+id/elecc_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="2dp"
+            android:hint="enter electricity budget here"
+            android:inputType="number"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView6_budg"
+            app:layout_constraintTop_toBottomOf="@+id/fuell_budg" />
+
+        <EditText
+            android:id="@+id/waterr_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="2dp"
+            android:hint="enter water budget here"
+            android:inputType="number"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView7_budg"
+            app:layout_constraintTop_toBottomOf="@+id/elecc_budg" />
+
+        <EditText
+            android:id="@+id/maintt_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="44dp"
+            android:layout_marginTop="2dp"
+            android:hint="enter maintenance budget here"
+            android:inputType="number"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView9_budg"
+            app:layout_constraintTop_toBottomOf="@+id/waterr_budg" />
+
+        <EditText
+            android:id="@+id/enterr_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="36dp"
+            android:layout_marginTop="2dp"
+            android:hint="enter entertainment budget here"
+            android:inputType="number"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView10_budg"
+            app:layout_constraintTop_toBottomOf="@+id/maintt_budg" />
+
+        <EditText
+            android:id="@+id/eduu_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="68dp"
+            android:layout_marginTop="2dp"
+            android:hint="enter education budget here"
+            android:inputType="number"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView11_budg"
+            app:layout_constraintTop_toBottomOf="@+id/enterr_budg" />
+
+        <EditText
+            android:id="@+id/travell_budg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="100dp"
+            android:layout_marginTop="2dp"
+            android:hint="enter travel budget here"
+            android:inputType="number"
+            android:textColor="@color/red"
+            android:textSize="18sp"
+            app:layout_constraintStart_toEndOf="@+id/textView12_budg"
+            app:layout_constraintTop_toBottomOf="@+id/eduu_budg" />
+
+        <Button
+            android:id="@+id/Back2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="Button"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,1524 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+
+         >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/black"
+            android:text="See transactions"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+
+        <TextView
+            android:id="@+id/current"
+            android:layout_width="218dp"
+            android:layout_height="47dp"
+            android:background="@color/white"
+            android:ems="10"
+            android:gravity="center|bottom"
+            android:inputType="number"
+            android:textColor="@color/black"
+            android:textSize="36sp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/button1"
+            app:layout_constraintStart_toStartOf="parent" />
+        <Button
+            android:id="@+id/Add"
+            android:backgroundTint="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Add"
+            app:layout_constraintBottom_toTopOf="@+id/button1"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <Button
+            android:id="@+id/Addbudget"
+            android:backgroundTint="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Add/edit budget"
+            app:layout_constraintBottom_toTopOf="@+id/button1"
+            app:layout_constraintEnd_toStartOf="@+id/Add" />
+
+        <Button
+            android:id="@+id/piechart"
+            android:backgroundTint="@color/black"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:text="Pie chart"
+            app:layout_constraintBottom_toTopOf="@+id/button1"
+            app:layout_constraintEnd_toStartOf="@+id/Addbudget" />
+
+        <ScrollView
+            android:layout_width="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/Addbudget"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="0dp">
+
+            <TableLayout
+                android:id="@+id/table"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:stretchColumns="*"
+                android:shrinkColumns="2"
+                app:layout_constraintBottom_toTopOf="@+id/current"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TableRow
+                    android:id="@+id/tableRow"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_two"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+
+                    <ImageView
+                        android:id="@+id/salary"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/salary_icon_foreground" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty15"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/salary1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/green"
+                        android:text="Salary"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Salary1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter salary value"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Salary"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:backgroundTint="#FFFFFF"
+                        android:ems="10"
+                        android:gravity="bottom|center"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty4"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/color_two">
+
+
+                    <ImageView
+                        android:id="@+id/bonuses"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/green"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/bonus_icon_foreground" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty16"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/bonuses1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/green"
+                        android:text="Bonuses"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Bonuses1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter bonus value"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        android:textStyle="bold"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Bonuses"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:gravity="center|bottom"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty5"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/groceries"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/groceries_icon_foreground" />
+
+
+                    <EditText
+                        android:id="@+id/budgetGroceries"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter groceries budget"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/groceriesbudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#FFFFFF"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty17"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/groceries1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        android:text="Groceries"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Groceries1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter groceries value"
+                        android:inputType="number"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Groceries"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:gravity="center|bottom"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty6"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <ImageView
+                        android:id="@+id/rent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/rent_icon_foreground" />
+
+
+                    <EditText
+                        android:id="@+id/budgetRent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter rent budget"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/rentbudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty18"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/rent1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        android:text="Rent"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Rent1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter rent value"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Rent"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:gravity="center|bottom"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty7"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/fuel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/fuel_icon_foreground" />
+
+
+                    <EditText
+                        android:id="@+id/budgetFuel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter fuel budget"
+                        android:textStyle="bold"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/fuelbudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty19"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/fuel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        android:text="Fuel"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Fuel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:hint="Enter fuel value"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Fuel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:gravity="center|bottom"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty8"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/electricity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/electricity_icon_foreground" />
+
+
+                    <EditText
+                        android:id="@+id/budgetElectricity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter electricity budget"
+                        android:textStyle="bold"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/electricitybudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty20"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/electricity1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        android:text="Electricity"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Electricity1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:hint="Enter electricity value"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Electricity"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:gravity="center|bottom"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty9"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/water"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/water_icon_foreground" />
+
+
+                    <EditText
+                        android:id="@+id/budgetWater"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:hint="Enter water budget"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/waterbudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty21"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/water1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        android:text="Water"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Water1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:hint="Enter water value"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Water"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:gravity="center|bottom"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty10"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/maintenance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/maintanance_icon_foreground" />
+
+
+                    <EditText
+                        android:id="@+id/budgetMaintenance"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:textStyle="bold"
+                        android:gravity="center"
+                        android:hint="Enter maintenance budget"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/maintenancebudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty22"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/maintenance1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        android:text="Maintenance"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Maintenance1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:textStyle="bold"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter maintenance value"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Maintenance"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:gravity="center|bottom"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty11"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/entertainment"
+                        android:layout_width="135dp"
+                        android:layout_height="wrap_content"
+                        android:background="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/entertaiment_icon_foreground" />
+
+
+                    <EditText
+                        android:id="@+id/budgetEntertainment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:textStyle="bold"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter entertainment budget"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="9sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/entertainmentbudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty23"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/entertainment1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        android:textStyle="bold"
+                        android:text="entertainment"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Entertainment1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter entertainment value"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Entertainment"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:gravity="center|bottom"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty12"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/education"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/school_icon_foreground" />
+
+
+                    <EditText
+                        android:id="@+id/budgetEducation"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:textStyle="bold"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter education budget"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/educationbudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty24"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/education1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        android:text="Education"
+                        android:textAlignment="center"
+                        android:textStyle="bold"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Education1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:autofillHints=""
+                        android:background="#B8B8B8"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter education value"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Education"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:gravity="center|bottom"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty13"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <ImageView
+                        android:id="@+id/travel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/travel_icon_foreground" />
+
+
+                    <EditText
+                        android:id="@+id/budgetTravel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:textStyle="bold"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter travel budget"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/travelbudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty25"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/travel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        android:text="Travel"
+                        android:textAlignment="center"
+                        android:textColor="@color/white"
+                        android:textSize="20dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Travel1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:textStyle="bold"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter travel value"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Travel"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:gravity="center|bottom"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty26"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <TextView
+                        android:id="@+id/other"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:text="Others"
+                        android:textSize="20dp"
+                        android:textColor="@color/white"
+                        android:textAlignment="center"
+                        android:background="@color/red"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:srcCompat="@mipmap/travel_icon_foreground" />
+
+
+                    <EditText
+                        android:id="@+id/otherbudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:textStyle="bold"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter 'others' budget"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/othersbudget"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@color/black">
+                    <TextView
+                        android:id="@+id/empty27"
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:text=""
+                        android:textAlignment="textEnd"
+                        android:textSize="15dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </TableRow>
+                <TableRow
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <EditText
+                        android:id="@+id/others1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/red"
+                        android:textColor="@color/white"
+                        android:textStyle="bold"
+                        android:hint="Optional: Enter category"
+                        android:textAlignment="center"
+                        android:textSize="10dp"
+                        app:layout_constraintEnd_toEndOf="@+id/salary"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@+id/salary" />
+
+                    <EditText
+                        android:id="@+id/Others1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="#B8B8B8"
+                        android:textStyle="bold"
+                        android:ems="10"
+                        android:gravity="center"
+                        android:hint="Enter 'others'' value"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="10sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+                    <TextView
+                        android:id="@+id/Other"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:ems="10"
+                        android:gravity="center|bottom"
+                        android:inputType="number"
+                        android:textColor="@color/black"
+                        android:textSize="36sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/button1"
+                        app:layout_constraintStart_toStartOf="parent" />
+
+
+                </TableRow>
+            </TableLayout>
+        </ScrollView>
+
+
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

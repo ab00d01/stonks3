@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">stonks</string>
+    <string name="enter_your_electricity_expenses_for_the_past_month">Enter your electricity expenses for the past month</string>
+    <string name="enter_any_bonus_income_from_your_job_here">Enter any bonus income from your job here</string>
+    <string name="enter_amount_spent_on_fuel">Enter amount spent on fuel</string>
+    <string name="enter_amount_spent_on_grocereis">Enter amount spent on grocereis</string>
+    <string name="enter_your_monthly_rent_here">Enter your monthly rent here</string>
+    <string name="enter_your_monthly_income_here">Enter your monthly income here</string>
+    <string name="enter_your_water_expenses_for_the_past_month">enter_your_water_expenses_for_the_past_month</string>
+    <string name="enter_maintanance_cost_here">Enter maintanance cost here</string>
+    <string name="enter_entertaiment_cost_here">Enter entertaiment cost here</string>
+    <string name="enter_amount_of_money_spent_on_education_purposes_such_as_school_university_college_etc...">Enter amount of money spent on education purposes, such as school,university,college etc…</string>
+    <string name="enter_amount_spent_on_travelling_trips">Enter amount spent on travelling trips</string>
+</resources>
